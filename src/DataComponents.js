@@ -21,14 +21,27 @@ const jsonData={
                       "justifyContent":'center',
                       "alignItems":'center',
                       "backgroundColor":'black',
-                      "flexDirection":'column'
+                      "flexDirection":'row',
+                      'width':'400px',
+                      'height':'50px'
                     }
         },
         {
             "component": "container-body",
             "children": [
                 {
-                    "component": "container-news-notices"
+                    "component": "container-news-notices",
+                    "style": {
+                        "display":'flex',
+                        "justifyContent":'center',
+                        "alignItems":'center',
+                        "backgroundColor":'blue',
+                        "flexDirection":'row',
+                        "color": "black",
+                        'width':'400px',
+                        "height": "30px"
+                      },
+                    "text":"teste"
                 },
                 {
                     "component": "container-basic",
@@ -36,9 +49,17 @@ const jsonData={
                         {
                             "component": "container-action",
                             "text": "PAINEL",
-                            "path": {
-                                "url": "...painel"
-                            },
+                            "icon": 'fafile',
+                            "style": {
+                        "display":'flex',
+                        "justifyContent":'center',
+                        "alignItems":'center',
+                        "backgroundColor":'white',
+                        "flexDirection":'column',
+                        "color": "black",
+                        "borderRadius": "5px",
+                        'padding':'5px'
+                      },
                             "onPress": [
                                 {
                                     "action": "",
@@ -51,9 +72,7 @@ const jsonData={
                         {
                             "component": "container-action",
                             "text": "ESPAÇO CIA",
-                            "path": {
-                                "url": ""
-                            },
+                            "icon": 'fafile',
                             "onPress": [
                                 {
                                     "action": "",
@@ -66,9 +85,7 @@ const jsonData={
                         {
                             "component": "container-action",
                             "text": "A CAMPANHA",
-                            "path": {
-                                "url": ""
-                            },
+                            "icon": 'fafile',
                             "onPress": [
                                 {
                                     "action": "",
@@ -81,9 +98,7 @@ const jsonData={
                         {
                             "component": "container-action",
                             "text": "ESPAÇO RH",
-                            "path": {
-                                "url": ""
-                            },
+                            "icon": 'faambulance',
                             "onPress": [
                                 {
                                     "action": "/",
@@ -95,13 +110,17 @@ const jsonData={
                         }
                     ],
                     "style": {
-                      "display":'flex',
+                      "display":'grid',
                       "justifyContent":'center',
+                      'gridTemplateColumns':'repeat(2, 1fr)',
                       "alignItems":'center',
-                      "backgroundColor":'white',
+                      "backgroundColor":'whitesmoke',
                       "flexDirection":'column',
                       "padding":"10px",
-                      "color":"red"
+                      "color":"black",
+                      'fontSize':'15px',
+                      'marginTop':'20px',
+                      'marginBottom':'20px'
                     }
                 }
             ],
@@ -110,7 +129,8 @@ const jsonData={
               "justifyContent":'center',
               "alignItems":'center',
               "backgroundColor":'whitesmoke',
-              
+              'width':'400px',
+              "flexDirection":'column'
             }
         },
         {

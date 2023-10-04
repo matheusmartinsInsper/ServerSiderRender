@@ -2,15 +2,20 @@ import React from 'react'
 import {faAmbulance,faFile} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Header=(props)=>{
-    const {syle,text,component}=props
+const MappingIcons={
+    'fafile':faFile,
+    'faambulance':faAmbulance
+}
+
+const Icons=(props)=>{
+    const {syle,text,component,iconName}=props
     
     return <>
     <div style={syle} >
-        
-        {text&&<p>{text}</p>}
+        <FontAwesomeIcon icon={MappingIcons[iconName]}/>
+        <p>{text}</p>
         {props.children && props.children}
     </div>
     </>
 }
-export default Header
+export default Icons
